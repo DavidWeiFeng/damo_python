@@ -58,7 +58,7 @@ class DmSoft:
             print(f"注册失败，错误码: {res}")
         return res
 
-    def BindWindow(self, hwnd, display="gdi", mouse="dx", keypad="normal", mode=0):
+    def BindWindow(self, hwnd, display="gdi", mouse="dx2", keypad="normal", mode=0):
         BindFunc = ctypes.CFUNCTYPE(ctypes.c_long, ctypes.c_long, ctypes.c_long, ctypes.c_char_p, ctypes.c_char_p,
                                     ctypes.c_char_p, ctypes.c_long)(DmSoft._dm_hmodule + 120080)
         return BindFunc(self.obj, hwnd, display.encode('utf-8'), mouse.encode('utf-8'), keypad.encode('utf-8'), mode)
