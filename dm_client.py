@@ -44,7 +44,6 @@ class dm_client:
 
 if __name__ == '__main__':
     dm = dm_client("127.0.0.1","9000")
-    hwnd=4590404
-    for I in range(9):
-        dm.MoveTo(hwnd,853,611)
-        print(dm.LeftClick(hwnd))
+    hwnd=3608184
+    dm.MoveTo(hwnd,704,502)
+    print(dm.LeftClick(hwnd))
